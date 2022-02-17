@@ -42,3 +42,11 @@ print(i1[4])
 # 요구사항인 추상메서드를 모두 구현해야 동작
 
 from collections.abc import Sequence
+class IterTestB(Sequence):
+  def __getitem__(self, idx):
+    return range(1, 50, 2)[idx]
+  def __len__(self, idx):
+    return len(range(1, 50, 2)[idx])
+  
+i2 = IterTestB()
+
